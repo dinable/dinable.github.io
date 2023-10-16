@@ -1,0 +1,27 @@
+{
+  "name": "wit_vorlage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "rollup": "^3.20.7"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "requirejs": "^2.3.6",
+    "three": "^0.135.0",
+    "three-mesh-bvh": "^0.5.23",
+    "three-plain-animator": "^1.1.2",
+    "web-ifc": "^0.0.35",
+    "web-ifc-three": "^0.0.118"
+  }
+}

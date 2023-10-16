@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../../favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Rock+Salt&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/e23613ff3b.js" crossorigin="anonymous"></script>
+<title>Dinable</title>
+<link rel="icon" type="image/x-icon" href="/Logo/favicon.PNG">
+</head>
+<body>
+    <div class="header">
+        <div class="topnav">
+            <div class="topnav-buttons handwritten" style="font-size: 14px;">
+                <a class="hover-3" href="/index.html">Info</a>
+                <a class="hover-3" href="/index.html#Umfrage">Umfrage</a>
+                <a class="hover-3" href="#App">App</a>
+                <a class="hover-3" href="#Kontakt">Kontakt</a>
+            </div>
+        </div>
+    
+ <div  id="Home" style="display: flex; justify-content:center">
+    
+         <img  src="./Logo/Dinable.gif" width="600vw" height="330vh" alt="Logo" > 
+    </div> 
+
+    <div class="white-box"></div>
+
+    <!-- <div class="N-position">
+        <img  src="./Logo/Logo_Pikto_dinable_klein.png" width="40vw" height="100%" alt="LogoN">
+    </div> -->
+    </div>
+
+
+    
+
+
+
+<div class="row">
+    <div class="sidebar right" id="App">
+        <canvas id="three-canvas"></canvas>
+    </div>
+</div>
+
+
+
+
+
+<div class="tab">
+
+            <button name="Info" class="tablinks"  onclick="openTab(event, 'Info')" id="defaultOpen"><i class="fa-solid fa-circle-info fa-lg"></i> </button>
+            <button name="Upload" class="tablinks" id="uploadmode" onclick="openTab(event, 'Upload')"><i class="fa-solid fa-upload fa-lg"></i>  </button>
+            <!-- <button name="Raum" class="tablinks" id="drawmode" onclick="openTab(event, 'Raum')"><i class="fa-solid fa-draw-polygon fa-lg"></i>  </button> -->
+            <button name="Check" class="tablinks" id="furnituremode" onclick="openTab(event, 'Check')"><i class="fa-solid fa-bed fa-lg"></i>  </button>
+      
+            <button name="DINcheck" class="tablinks" id="dincheckmode" onclick="openTab(event, 'DINcheck')"> <i class="fa-solid fa-check fa-lg"></i>  </button> 
+            <button name="Story" class="tablinks" id="storymode" onclick="openTab(event, 'Story')"><i class="fa-solid fa-arrow-pointer fa-lg"></i>  </button>
+            <button name="Download" class="tablinks" id="downloadmode" onclick="openTab(event, 'Download')"> <i class="fa-solid fa-download fa-lg"></i>  </button> 
+
+</div>
+  
+ 
+<div id="Info" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="close-button hover-3">&times</span>
+    
+    <h3 class="handwritten" >Info</h3><br>
+    <h4>Schön, dass sie da sind!</h2>
+    <p>Sie werden mit den einzelnen Menü-Punkten, durch die vereinfachte DIN-konforme und barrierefreie Planung geleitet.</p><br>
+    
+    <div class="user">
+    <h4 style="color: rgb(255, 94, 0);">Um zu beginnen, drücken sie den <i class="fa-solid fa-upload fa-lg"></i> Knopf  in der Menüleiste.</h4>
+     </div>
+</div>
+  
+  <div id="Upload" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="close-button  hover-3">&times</span>
+    
+    <h3 class="handwritten" >Upload</h3><br>
+    <p>Hier wird eine Beispieldatei für sie hochgeladen.</p><br>
+     <!-- <input type="file" id="file-input" >   -->
+
+    <div id="loading-container">
+
+        <i class="fa-solid fa-spinner fa-lg" style="margin:5px;"></i>
+        <p>Loading: </p>
+        <p id="progress-text"> 0</p>
+        <p> %</p>
+    </div>
+    <br>
+    <br>
+    <div class="user">
+        <p>Weiter zur Bewegungsflächengenerierung <i class="fa-solid fa-bed fa-lg"></i>.</p><br>
+    </div>  
+</div>
+  
+<div id="Raum" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="close-button  hover-3">&times</span>
+    
+    <h3 class="handwritten" >Raumbegrenzung</h3><br>
+    <p>Zeichnen sie den gewünschten Grundriss ein.</p><br> 
+    <div class="liste">
+        <ol>
+            <li>a und Doppelklick: <br>Um den ersten Eckpunkt zu setzen. </li><br>
+            <li>Shift drücken und Doppelklick: <br>Um einen rechtwinklige Linie in y-Richtung zu erstellen</li><br>
+            <li>Shift loslassen und Doppelklick:<br> Um einen rechtwinklige Linie in x-Richtung zu erstellen</li><br>
+            <li>Shift und x und Doppelklick auf die erste Kugel:<br> Um den Vorgang abzuschließen.</li><br>
+        </ol>					
+    </div>
+
+</div>
+
+<div id="Check" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="close-button  hover-3">&times</span>
+    
+    <h3 class="handwritten" >Bewegungsflächen</h3><br>
+   
+    <p>▶︎ Klicken sie die abgefragten spezifischen Möbel im Modell an. </p><br> 
+    <p>Drücke sie die Tase Z, wird die letzte Möbelauswahl rückgängig gemacht.</p><br>
+    <p>Bestätigen sie die Auswahl, indem sie den ✔ drücken. </p><br> 
+ 
+    <p>Die entsprechenden Bewegungsflächen werden automatisch generiert, für eine Rollstuhlgerechte Wohnung.</p><br>
+   
+
+    <br>
+    <div class="user">
+
+        <p> Weiter zum  DIN Check <i class="fa-solid fa-check fa-lg"></i>.</p>
+    </div>
+        <!--    
+    <div class="dropdown">
+        <span class="dropbtn hover-3"> Auswahl Sanitärobjekte  <i class="fa fa-caret-down"></i></span>
+        <div class="dropdown-content">
+            <div class="container">
+            <div>
+                <label class="container">Wände
+                <input type="checkbox" checked="true" id="IFCWALLSTANDARDCASE">
+                <span class="checkmark"></span>
+            </label></div> 
+   
+            <div>
+                <label class="container">Boden und Decke
+                <input type="checkbox" checked="true" id="IFCSLAB">
+                <span class="checkmark"></span>
+            </label></div>
+  
+            <div>
+                <label class="container">Möbel
+                <input type="checkbox" checked="true" id="IFCFURNISHINGELEMENT"> 
+                <span class="checkmark"></span>
+           </label> </div>
+            <div>
+                <label class="container">Türe
+                <input type="checkbox" checked="true" id="IFCDOOR"> 
+                <span class="checkmark"></span>
+           </label> </div>
+            <div>
+                <label class="container">Fenster
+                <input type="checkbox" checked="true" id="IFCWINDOW"> 
+                <span class="checkmark"></span>
+            </label></div>
+
+            <div>
+                <label class="container">Sanitärobjekte
+                <input type="checkbox" checked="true" id="IFCSANITARYTERMINAL">
+                <span class="checkmark"></span>
+            </label></div>
+            <div>
+                <label class="container">Fassaden Glas
+                <input type="checkbox" checked="true" id="IFCPLATE">
+                <span class="checkmark"></span>
+            </label></div>
+            <div>
+                <label class="container">Fassaden Struktur
+                <input type="checkbox" checked="true" id="IFCMEMBER">
+                <span class="checkmark"></span>
+            </label></div>
+        </div>
+      </div>
+      </div> -->
+
+
+    <!-- <p>Wählen sie das Regelwerk aus, das geprüft werden soll.</p><br> 
+
+    <div class="dropdown">
+        <span class="dropbtn hover-3"> Auswahl Regelwerk  <i class="fa fa-caret-down"></i></span>
+        <div class="dropdown-content">
+         
+            <div>
+                    <label class="container">DIN 18040 Teil 1 <br/> Öffentliche Gebäude
+                    <input type="radio" checked="true" id="01" name="radio">
+                    <span class=" dot"></span>
+                </label>
+            </div>
+
+                     
+                    <div>
+                        <label class="container">DIN 18040 Teil 2  <br/> Wohnungen
+                        <input type="radio"  id="02" name="radio">
+                        <span class=" dot"></span>
+                    </label>
+                </div>
+                        
+                <div>
+                    <label class="container">Ambulant betreute  <br/>  Wohngemeinschaften
+                    <input type="radio"  id="03" name="radio">
+                    <span class=" dot"></span>
+                </label>
+            </div>
+
+       
+        </div>
+    </div>
+    <br><br>
+    <p>Anschließend können sie die Möbel anklicken und an die gewünschte Stelle verschieben. Sie erhalten direktes Feedback, ob die Position DIN-konform und barrierefrei ist.</p>
+   -->
+</div>
+  
+<div class="tabcontent-programm" id="programmFurniture" ></div>
+<button id="checkedBtn" class="tabcontent-programm buttonsAreaRound"><i class="fa-solid fa-check fa-lg"></i> </button>
+    
+
+<div class="tabcontent-flexible" >
+    <div>
+        <label class="container">WC
+        <input type="radio" checked="true" id="WC" name="radio2">
+        <span class="dot"></span>
+    </label></div>
+    <div>
+        <label class="container">Waschtisch
+        <input type="radio"  id="Waschtisch" name="radio2">
+        <span class="dot"></span>
+    </label></div>
+    <div>
+        <label class="container">Badewanne
+        <input type="radio"  id="Badewanne" name="radio2">
+        <span class="dot"></span>
+    </label></div>
+    <div>
+        <label class="container">Dusche
+        <input type="radio"  id="Dusche" name="radio2">
+        <span class="dot"></span>
+    </label></div>
+    <div>
+        <label class="container">Bett
+        <input type="radio"  id="Bett" name="radio2">
+        <span class="dot"></span>
+    </label></div>
+    <div>
+        <label class="container">Küchenzeile
+        <input type="radio"  id="Küchenzeile" name="radio2">
+        <span class="dot"></span>
+    </label></div>
+    <div>
+        <label class="container">Ende
+        <input type="radio"  id="Ende" name="radio2">
+        <span class="dot"></span>
+    </label></div>
+
+
+
+</div>
+
+
+
+
+<div id="DINcheck" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="close-button hover-3">&times</span>
+
+    <h3 class="handwritten" > DIN Check</h3><br>
+
+    <button id="checkall-button" class="dincheck-button dincheck-buttonhover">DIN Check</button> 
+    <p id="demo" class="demo" ></p>
+
+    <br>
+    <br>
+    
+  
+
+   <p>Nachdem der DIN Check ausgeführt wurde, sind alle Kollisionen und DIN-Verstöße hier in der Tabelle aufgeführt.</p><br>
+   
+   
+
+    <!-- <button id="checkall-button-position" class="hover-3">DIN Check Position</button> 
+    <p>Der DIN Check wurde automatisch für sie ausgeführt. </p><br>
+    <p>Drücken sie den Button, um an die entsprechende Kollision geführt zu werden.</p> -->
+    <!-- <div id="containerDynamic"></div>
+   <div>
+      <button id="submit">Create</button>
+   </div> -->
+   
+   <br>
+   
+
+
+    <ul id="myUL">
+        <li id="tree-root">
+            <span class="caret">Kollisionen</span>
+            <ul class="nested">
+                <li>Water</li>
+                <li>Coffee</li>
+                <li>
+                    <span class="caret">Tea</span>
+                    <ul class="nested">
+                        <li>Black Tea</li>
+                        <li>White Tea</li>
+                        <li><span class="caret">Green Tea</span>
+                            <ul class="nested">
+                                <li>Sencha</li>
+                                <li>Gyokuro</li>
+                                <li>Matcha</li>
+                                <li>Pi Lo Chun</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="info">
+        <p>Tabellennutzung</p>    
+        <br> 
+        <p>▷ Mit der Maus über die Tabelleneinträge fahren:  
+        <br>
+       Das entsprechende Möbelstück wird markiert und eine Animation erscheint, die eine mögliche Nutzung dieser Bewegungsfläche demonstriert.
+       Wenn ein DIN-Verstoß-Hinweis im Modelll zu sehen ist, fahren sie mit der Maus über den Hinweis. Dort können sie die DIN-Regel nachlesen, die verletzt wurde.
+       </p>
+       <br>
+       <p>▶︎▶︎ Doppelklick auf einen Eintrag:  
+        <br>
+        Die an der Kollision beteiligten Objekte werden farblich markiert. </p>
+        <br>
+    
+        <p>🔘 Auf den Auswahlknopf drücken: 
+            <br>
+             Es wird auf die Kollisionsstelle im Modell gezoom. 
+        </p>
+            <br>
+    
+        </div> 
+    <div class="user">
+
+           <p>Weiter zur Umplanung <i class="fa-solid fa-arrow-pointer fa-lg"></i>.</p>
+    </div>
+        <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<div id="Story" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="close-button hover-3">&times</span>
+
+    <h3 class="handwritten" > Manuelle Umplanung </h3><br>
+    <!-- <button id="checkall-button" class="hover-3">DIN Check</button> 
+    <p id="demo" ></p>
+
+    <button id="checkall-button-position" class="hover-3">DIN Check Position</button>  -->
+ 
+      <ul>Klicken sie doppelt auf das Möbelstück, das sie verschieben möchten.</ul><br>
+      <p>Drücke R, um das Möbelstück zu rotieren</p>
+      <p>Drücke E, und das WC/Bett, um die Bewegungsfläche zu spiegeln.</p>
+      <p>Drücke T, um das Möbelstück zu verschieben</p>
+      <p>Drücke W, und klicke auf eine Wand, um sie zu verschieben</p><br>
+      <p>Drücke Z, um das Möbelstück, oder die Wand in ihre Ausgangsposition zu verschieben</p><br>
+
+      <ul id="myUL">
+        <li id="tree-root2">
+            <span class="caret">Kollisionen</span>
+            <ul class="nested">
+                <li>Water</li>
+                <li>Coffee</li>
+                <li>
+                    <span class="caret">Tea</span>
+                    <ul class="nested">
+                        <li>Black Tea</li>
+                        <li>White Tea</li>
+                        <li><span class="caret">Green Tea</span>
+                            <ul class="nested">
+                                <li>Sencha</li>
+                                <li>Gyokuro</li>
+                                <li>Matcha</li>
+                                <li>Pi Lo Chun</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="user">
+
+        <p >Weiter zum download ihrer Planung <i class="fa-solid fa-download fa-lg"></i>.</p>
+    </div>
+    </div>
+
+        
+<div id="Download" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="close-button hover-3">&times</span>
+    
+    <h3 class="handwritten" > Download </h3><br>
+      <p>Hier können sie die ifc-Datei, die sie erstellt haben, herunterladen.</p><br>
+      
+
+    <button id="download-button" class="dincheck-button dincheck-buttonhover">download</button>
+    <div class="user">
+        <p >Vielen Dank, dass sie DINable© nutzen!</p>
+    </div>
+</div>
+
+
+    <!-- <div class=" card "> Menu Points
+    </div>
+        <div class=" card-menu"> -->
+ 
+
+        <br>
+       
+  
+    <!-- </div> -->
+
+</div>
+</div>
+
+
+
+
+
+  <script>
+ 
+    function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    
+
+  </script>
+
+
+<!-- <div class="sidenav">
+    <a class="tablinks" href="#about" onclick="openTab(event, 'ifcfile')">About</a>
+    <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+    <button class="dropdown-btn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a id="ifcfile" href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    <a href="#contact">Search</a>
+  </div>
+  
+  <div class="main">
+    <h2>Sidebar Dropdown</h2>
+    <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+    <p>This sidebar is of full height (100%) and always shown.</p>
+    <p>Some random text..</p>
+  </div> -->
+  
+  <!-- <script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script> -->
+
+
+  
+
+    <script src="bundle.js"></script>
+
+    
+
+    <footer >
+        <div class="footerContainer">
+    <div class="textContentFooter" style="font-size: larger;">
+        <p> DINable© </p>
+    </div>
+    
+    
+    
+        <div class="textContentFooter">
+            <a href="#Home" ><i></i>To the top</a> <br><br>
+            <!--<i class="fa fa-instagram w3-hover-opacity"></i> -->
+          
+          
+            <i class="fa fa-linkedin w3-hover-opacity" style="padding-right: 5px; margin-top: 3px"></i>
+            <a href="https://www.linkedin.com/in/amelie-hofer-98910a255" title="Amelie Hofer" target="_blank" class="textContentFooter text-footer">Amelie Hofer</a>
+           <br><br>
+            <p class="textContentFooter">Powered by</p><br> 
+              <p><a href="https://www.icd.uni-stuttgart.de/" title="Uni Stuttgart" target="_blank" class="textContentFooter text-footer"> institut for computational Design and Construction, icd</a> </p>
+              <p><a href="https://www.iwe.uni-stuttgart.de/" title="Uni Stuttgart" target="_blank" class="textContentFooter text-footer"> Institut Wohnen und Entwerfen, iwe</a></p> 
+              <br><p class="textContentFooter">Universität Stuttgart 2023 </p>
+            
+        </div>
+    
+    
+        
+           </footer>
+
+</body>
+</html>
+
+
