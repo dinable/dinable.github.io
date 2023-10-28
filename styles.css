@@ -1794,6 +1794,7 @@ display: none;
  height: 4rem;
   color: var(--orange-color);
   text-align: center;
+  padding-top: 1rem;
   
   
  
@@ -1802,7 +1803,7 @@ display: none;
   height: 4rem;
   color: var(--orange-color);
   text-align: center;
-  
+  padding-top: 1rem;
  
  
 }
@@ -1811,7 +1812,7 @@ display: none;
   height: 4rem;
   color: var(--orange-color);
   text-align: center;
-  
+  padding-top: 1.5rem;
  
  
 }
