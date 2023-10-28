@@ -1592,7 +1592,7 @@ display: none;
 
   background-color: rgb(255, 255, 255);
   border: solid 2px lightgrey; 
-  width: 95vw; 
+  
   position: relative; 
   left: 2vw;
   border-bottom-right-radius: 225px 19px;
@@ -1795,7 +1795,7 @@ display: none;
   color: var(--orange-color);
   text-align: center;
   
-  margin-left: 30px;
+  
  
 }
 #myBar3 {
@@ -1803,7 +1803,7 @@ display: none;
   color: var(--orange-color);
   text-align: center;
   
-  margin-left: 30px;
+ 
  
 }
 #myBar4 {
@@ -1812,6 +1812,6 @@ display: none;
   color: var(--orange-color);
   text-align: center;
   
-  margin-left: 30px;
+ 
  
 }
