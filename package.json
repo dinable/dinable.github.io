@@ -16,8 +16,11 @@
     "rollup": "^3.20.7"
   },
   "dependencies": {
+    "csv-parse": "^5.5.5",
     "fs": "^0.0.1-security",
+    "read-excel-file": "^5.7.1",
     "requirejs": "^2.3.6",
+    "sqlite3": "^5.1.7",
     "three": "^0.135.0",
     "three-mesh-bvh": "^0.5.23",
     "three-plain-animator": "^1.1.2",

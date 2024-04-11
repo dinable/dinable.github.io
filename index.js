@@ -14,6 +14,32 @@ import {
   MeshPhongMaterial,
   MathUtils,
 } from "three";
+
+//CSV import
+// const fileInput = document.getElementById('csvFileInput');
+// const reader = new FileReader();
+
+
+// // reader.
+// // fileInput.addEventListener('change', (event) => {
+// //   const file = event.target.files[0];
+// //   reader.readAsText(file);
+// //   console.log(2)
+// // });
+// function printCSV(file){
+//   reader.onload = function(event) {
+//     const text = event.target.result;
+//     console.log(text)
+    
+//   };
+//   const blobcsv = new Blob(file)
+//   reader.readAsText(blobcsv)  
+// }
+
+// const csv = './csvFile.csv'
+// printCSV(csv)
+
+
 //import { BufferGeometryUtils } from "three/examples/jsm/utils/BufferGeometryUtils.js"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { TransformControls } from "three/examples/jsm/controls/TransformControls.js";
@@ -55,6 +81,7 @@ import { RGBFormat } from "three";
 import { Line } from "three";
 import { LineBasicMaterial } from "three";
 import { BufferGeometry } from "three";
+
 
 //Creates the Three.js scene
 const scene = new Scene();
