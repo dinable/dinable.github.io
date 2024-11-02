@@ -98194,7 +98194,8 @@ async function loadingIfc(path) {
 
 let ifcProject;
 async function showModel() {
-  const ifcModel = await loadingIfc("./ifc/wand2.ifc");
+  const ifcModel = await loadingIfc("./ifc/ifc_Test.ifc");
+  //"./ifc/wand2.ifc"
   scene.add(ifcModel);
 
   ifcProject = await loader.ifcManager.getSpatialStructure(model.modelID);
